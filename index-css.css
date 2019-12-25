@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", "Open Sans", "Arial", sans-serif;
+}
+
+header {
+  padding-bottom: 100px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 25px;
+}
+
+#titleSub {
+  font-weight: lighter;
+  padding-top: 25px;
+}
+
+#mainContainer {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+#dSet {
+  width: fit-content;
+  margin: 0 auto;
+  list-style: none;
+  color: white;
+  display: flex;
+  padding: 15px;
+  vertical-align: middle;
+}
+
+#dSet .dSetElem {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  background-color: #000;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: solid 5px #fff;
+}
+
+#dSet .dSetElem p {
+  padding: 8px;
+  font-size: 12px;
+}
+
+.primary {
+
+  background-color: #f53b57;
+  color: #fff;
+  padding: 15px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 3px 3px 22px -10px rgba(0,0,0,0.4);
+  transition: 0.2s ease-in-out;
+  min-width: 150px;
+  display: block;
+  margin: 10px;
+
+}
+
+.primary:focus {
+
+  outline: none;
+}
+
+.primary:hover {
+
+  transition: 0.2s ease-in-out;
+  box-shadow: 5px 10px 25px -8px rgba(0,0,0,0.42);
+}
+
+.green {
+  background-color: #0be881;
+}
+
+#ctrlButtons {
+  margin-left: 128px;
+  margin-top: 80px;
+  width: fit-content;
+  display: inline-block;
+}
+
+#ctrlVal {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 90px;
+  padding: 0px 15px;
+}
+
+#iterSpeed {
+
+  padding: 15px;
+  width: 45px;
+  height: 20px;
+  font-size: 15px;
+  border-radius: 3px;
+  border: solid 1px gray;
+}
