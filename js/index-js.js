@@ -40,7 +40,7 @@ $(document).ready(function(){
 
     var bubbleSort = async function(arr){
 
-        iterTime = (500 - document.getElementById('iterSpeed').value) * 10;
+        iterTime = 100 - (document.getElementById('iterSpeed').value * 10);
 
         if (iterTime < 0) {
             iterTime = 0;
@@ -52,7 +52,7 @@ $(document).ready(function(){
             
             for (var j = 0; j < arr.length; j++) {
 
-                iterTime = (500 - document.getElementById('iterSpeed').value) * 10;
+                iterTime = 100 - (document.getElementById('iterSpeed').value * 10);
 
                 if (iterTime < 0) {
                     iterTime = 0;
@@ -94,7 +94,7 @@ $(document).ready(function(){
 
     var selectionSort = async function(arr) {
 
-        iterTime = (500 - document.getElementById('iterSpeed').value) * 10;
+        iterTime = 100 - (document.getElementById('iterSpeed').value * 10);
 
         if(iterTime < 0) {
             iterTime = 0;
@@ -107,9 +107,9 @@ $(document).ready(function(){
             var minInd = i;
             for (var j = i + 1; j < arr.length; j++) {
 
-                iterTime = (500 - document.getElementById('iterSpeed').value) * 10;
+                iterTime = 100 - (document.getElementById('iterSpeed').value * 10);
 
-                if(iterTime < 0) {
+                if (iterTime < 0) {
                     iterTime = 0;
                 }
 
@@ -138,14 +138,70 @@ $(document).ready(function(){
 
     }
 
+    var insertionSort = async function(arr) {
+
+        iterTime = 100 - (document.getElementById('iterSpeed').value * 10);
+
+        if (iterTime < 0) {
+            iterTime = 0;
+        }
+
+        for (var i = 0; i < arr.length - 1; i++) {
+
+            $('#dBlock' + i).attr("style", "box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.38); border-bottom: solid 5px #ffdd59; background-color: rgb(" + arr[i] * 10 + ", " + (arr[i] * 15) + ", " + (arr[i] * 20) + ");");
+
+            $('#dBlock' + (i + 1)).attr("style", "box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.38); border-bottom: solid 5px #3498db; background-color: rgb(" + arr[i + 1] * 10 + ", " + (arr[i + 1] * 15) + ", " + (arr[i + 1] * 20) + ");");
+
+            
+            iterTime = 100 - (document.getElementById('iterSpeed').value * 10);
+
+            if (iterTime < 0) {
+                iterTime = 0;
+            }
+
+            if (arr[i + 1] < arr[i]) {
+
+                var cElem = arr[i + 1];
+                var j = i;
+
+                while (j >= 0 && arr[j] > cElem) {
+
+                    if (j != i){
+                        $('#dBlock' + j).attr("style", "box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.38); border-bottom: solid 5px #2ecc71; background-color: rgb(" + arr[j] * 10 + ", " + (arr[j] * 15) + ", " + (arr[j] * 20) + ");");
+                    }
+
+                    arr[j + 1] = arr[j];
+
+                    await sleep(iterTime);
+                    $('#d' + (j)).html(arr[j]);
+
+                    j--;
+
+                }
+
+                arr[j + 1] = cElem;
+                $('#d' + (j + 1)).html(arr[j + 1]);
+
+            }
+
+            await sleep(iterTime);
+            updateClr(arr);
+
+        }
+
+    }
+
     $('#genVal').click(function(){
         fillArr(data);
     });
     $('#bubbleSort').click(function(){
         bubbleSort(data);
-    })
+    });
     $('#selectSort').click(function(){
         selectionSort(data);
-    })
+    });
+    $('#insertSort').click(function(){
+        insertionSort(data);
+    });
 
 });

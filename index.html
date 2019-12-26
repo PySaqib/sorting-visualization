@@ -15,26 +15,23 @@
 </head>
 <body>
     <header>
-        <h1 id="title">Sorting Visualizer</h1>
-        <h4 id="titleSub">by Saqib Ali</h4>
+        <ul>
+            <li id="title">Sorting Visualizer</li>
+            <li><button class="primary green" id="genVal">FILL ARRAY</button></li>
+            <li><button class="primary" id="bubbleSort">BUBBLE SORT</button></li>
+            <li><button class="primary" id="selectSort">SELECTION SORT</button></li>
+            <li><button class="primary" id="insertSort">INSERT SORT</button></li>
+
+            <li>
+                <input type="number" id="iterSpeed" class="txtField" value="5"/>
+            </li>
+        </ul>
     </header>
     <div id="mainContainer">
 
         <ul id="dSet">
             
         </ul>
-
-        <div id="ctrlButtons">
-            <button class="primary green" id="genVal">FILL ARRAY</button>
-            <button class="primary" id="bubbleSort">BUBBLE SORT</button>
-            <button class="primary" id="selectSort">SELECTION SORT</button>
-        </div>
-        <div id="ctrlVal">
-
-            <label>SPEED (MAX: 500)</label><br><br>
-            <input type="number" id="iterSpeed" class="txtField" value="490"/>
-
-        </div>
 
     </div>
     
