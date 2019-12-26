@@ -38,7 +38,7 @@ header ul li {
 
 #mainContainer {
   width: 800px;
-  height: 500px;
+  height: 150px;
   margin: 0 auto;
 }
 
@@ -95,11 +95,40 @@ header ul li {
   background-color: #0be881;
 }
 
+#iterSpeedContainer {
+  line-height: 0.4;
+}
+
 #iterSpeed {
   padding: 15px;
   width: 45px;
-  height: 18px;
+  height: 4px;
   font-size: 15px;
   border-radius: 3px;
   border: solid 1px gray;
+}
+
+#iterSpeedLabel {
+
+  font-size: 10px;
+
+}
+
+#details {
+
+  width: 720px;
+  margin: 0 auto;
+
+}
+
+.detailPara {
+  padding: 15px 0px;
+  font-size: 13px;
+  width: 500px;
+  line-height: 1.6;
+}
+
+.paraTitle {
+  padding: 15px 0px;
+  font-size: 18px;
 }

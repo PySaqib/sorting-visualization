@@ -22,8 +22,9 @@
             <li><button class="primary" id="selectSort">SELECTION SORT</button></li>
             <li><button class="primary" id="insertSort">INSERT SORT</button></li>
 
-            <li>
-                <input type="number" id="iterSpeed" class="txtField" value="5"/>
+            <li id="iterSpeedContainer">
+                <label id="iterSpeedLabel">SPEED (0-10)</label><br></br>
+                <input type="number" min="0" max="10" id="iterSpeed" class="txtField" value="5"/>
             </li>
         </ul>
     </header>
@@ -32,6 +33,35 @@
         <ul id="dSet">
             
         </ul>
+
+    </div>
+
+    <div id="details">
+
+        <p class="detailPara">
+            <span class="paraTitle">How to use this tool?</span>
+            <br><br>
+            Firstly, user can fill the shown array with random, unsorted numbers using "FILL ARRAY" button. Next, you can use one of the provided algorithms to implement. You can also adjust the speed of execution using the speed counter given above.
+        </p>
+
+        <p class="detailPara">
+            <span class="paraTitle">What is sorting?</span>
+            <br><br>
+            According to Wikipedia, sorting is a process of arranging items systematically. In computing, sorting is referred to as categorizing, listing, or simply arranging data in a manner that may be meaningful to the computer or not. Sorting can also be done among elements with common attributes.
+        </p>
+
+        
+        <p class="detailPara">
+            <span class="paraTitle">Sorting Algorithms</span>
+            <br><br>
+            To cope with numerous computing challenges, mathematicians and computer scientists have devised various sorting algorithms. Famous ones include Bubble Sort, Selection Sort, Insertion Sort & QuickSort.<br><br>
+            In this tool, the user can visualize how these algorithms analyze the given data, draw comparisons, and sort the elements.
+        </p>
+
+        <p class="detailPara">
+            <br><br>
+            This project was created by Saqib Ali. Credits are highly appreciated. Thank you for using this tool, hopefully it helped you!
+        </p>
 
     </div>
     
